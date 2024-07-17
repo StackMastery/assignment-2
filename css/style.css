@@ -246,9 +246,14 @@ p{
     .hero .container{
         padding-top: 50px;
     }
-
+    .container {
+        margin-bottom: -146px !important;
+    }
 }
 @media screen and (max-width: 900px){
+    .container {
+        margin-bottom: -146px !important;
+    }
     h1 {
         font-size: 48px;
         line-height: 60px;
@@ -286,11 +291,11 @@ p{
             text-align: center;
         }
     }
-    .counter-box.counter-box-1 {
-        transform: translate(-10px , 56px);
-    }
     .counter-box.counter-box-2 {
-        transform: translate(-11px , 171px);
+        transform: translate(-76px , 171px) scale(0.7);
+    }
+    .counter-box.counter-box-1 {
+        transform: translate(71px, -69px) scale(0.7);
     }
     h1 {
         font-size: 38px;
