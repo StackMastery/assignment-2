@@ -20,4 +20,137 @@
 :root{
     --primary-color : #E6533C;
     --background-color : #000000;
+    --text-color :  #FFFFFF;
+    --border : #ffffff3e;
+}
+/*Var */
+.transition{
+    *{
+        transition: all 0.5s ease;
+    }
+    transition: all 0.5s ease;
+}
+/*Var */
+h1,h2,h3,h4,h5,h6,a{
+    color: var(--text-color) ;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+body{
+    background: var(--background-color);
+}
+.section{
+    display: flex;
+    justify-content: center;
+}
+.container{
+    display: inline-flex;
+    width: 1100px;
+    padding: 20px 20px;
+    justify-content: center;
+    align-items: center;
+}
+.header-box{
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    align-items: center;
+    width: 100%;
+}
+.logo h2 {
+	color: var(--primary-color);
+	font-weight: 800;
+	font-style: italic;
+    font-size: 36px;
+}
+.menu {
+	display: flex;
+	gap: 30px;
+	border: 1px solid var(--border);
+	padding: 10px 8px;
+	border-radius: 39px;
+	align-items: center;
+}
+.active-menu {
+	background: var(--primary-color);
+	padding: 5px 15px;
+	border-radius: 39px;
+	font-weight: 600;
+    border : 1px solid var(--primary-color) !important;
+    &:hover{
+        background: transparent !important;
+        color : var(--primary-color) !important;
+        border : 1px solid var(--primary-color) !important;
+    }
+}
+.menu li a {
+    padding: 4px 15px;
+    border-radius: 39px;
+    font-size: 18px;
+    border: 1px solid transparent;
+    &:hover{
+        background: white;
+        border: 1px solid white;
+        color: black;
+    }
+}.hamburger {
+    display: none;
+	width: 35px;
+	height: 30px;
+	flex-direction: column;
+	gap: 5px;
+    cursor: pointer;
+    &:hover{
+        span{
+            background: var(--primary-color);
+        }
+    }
+}
+.hamburger span {
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive */
+@media screen and (max-width: 678px) {
+    .hamburger{
+        display: flex;
+        &:hover>.menu{
+            display: flex !important;
+        }
+    }
+    .menu {
+        position: absolute;
+        left: 50%;
+        display: none;
+        transform: translate(-50%);
+        top: 104px;
+    }
+    .menu {
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+        top: 104px;
+        flex-direction: column;
+        width: 91%;
+        border-radius: 15px;
+        padding: 40px 20px;
+    }
 }
