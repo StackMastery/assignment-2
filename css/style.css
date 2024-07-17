@@ -21,7 +21,8 @@
     --primary-color : #E6533C;
     --background-color : #000000;
     --text-color :  #FFFFFF;
-    --border : #ffffff3e;
+    --border : #ffffff2b;
+    --p-color : rgba(255, 255, 255, 0.5);
 }
 /*Var */
 .transition{
@@ -38,6 +39,12 @@ h1,h2,h3,h4,h5,h6,a{
 }
 body{
     background: var(--background-color);
+    overflow-x: hidden;
+}
+header{
+    .container {
+        margin-bottom: -126px;
+    }
 }
 .section{
     display: flex;
@@ -45,9 +52,9 @@ body{
 }
 .container{
     display: inline-flex;
-    width: 1100px;
+    width: 1200px;
     padding: 20px 20px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
 }
 .header-box{
@@ -55,6 +62,7 @@ body{
     justify-content: space-between;
     padding: 20px 0;
     align-items: center;
+    background: transparent;
     width: 100%;
 }
 .logo h2 {
@@ -70,6 +78,9 @@ body{
 	padding: 10px 8px;
 	border-radius: 39px;
 	align-items: center;
+    li{
+        list-style: none;
+    }
 }
 .active-menu {
 	background: var(--primary-color);
@@ -112,6 +123,109 @@ body{
     background: white;
     border-radius: 10px;
 }
+.row{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+h1 {
+	font-size: 68px;
+	font-weight: 900;
+	line-height: 77px;
+}
+.itlaic-style {
+	font-family: "Miama";
+	font-weight: 400;
+	font-size: 137px;
+	line-height: 0;
+}
+p{
+    color : var(--p-color);
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 24px;
+}
+.btn-box {
+	display: flex;
+	gap: 20px;
+}
+.btn{
+    padding: 14px 35px;
+    font-weight: 400;
+    border-radius: 42px;
+	font-size: 16px;
+    border: 1px solid;
+}
+.btn-primary {
+	background: var(--primary-color);
+    border-color: var(--primary-color);
+    &:hover{
+        background: transparent;
+        color: var(--primary-color);
+    }
+}
+.btn-secondary {
+    &:hover{
+        background: white;
+        color: black;
+    }
+}
+.hero-img{
+    width: 350px;
+    height: auto;
+    align-self: end;
+    transform: translateX(59px);
+}
+.row.hero-row {
+	flex-direction: row;
+	align-items: center;
+    justify-content: center;
+}
+.counter-box {
+	background: rgba(255, 255, 255, 0.174);
+	backdrop-filter: blur(20px);
+	padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px !important;
+    z-index: 1;
+    position: absolute;
+	border-radius: 12px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+    div{
+        gap: 2px;
+        display: flex;
+        flex-direction: column;
+    }
+}
+.counter-box h2 {
+	font-size: 40px;
+	font-weight: 800;
+}
+.counter-box p {
+	font-size: 14px;
+    color : rgba(255, 255, 255, 0.65);
+}
+.circle{
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+}
+.counter-box.counter-box-2 {
+	transform: translate(-130px , 171px);
+}
+.counter-box.counter-box-1 {
+	transform: translate(175px , -72px);
+}
+.hero {
+	background: linear-gradient(0deg , #000 , #2c2c2ca6);
+    padding-top: 100px;
+}
+
+
 
 
 
@@ -129,6 +243,83 @@ body{
 
 
 /* Responsive */
+@media screen and (max-width:1080px){
+    h1 {
+        font-size: 58px;
+        line-height: 70px;
+    }
+    .hero-img {
+        width: 290px;
+    }
+    .counter-box.counter-box-1 {
+        transform: translate(128px , -72px);
+    }
+    .hero .container{
+        padding-top: 50px;
+    }
+
+}
+@media screen and (max-width: 900px){
+    h1 {
+        font-size: 48px;
+        line-height: 60px;
+    }
+    .itlaic-style {
+        font-size: 100px;
+    }
+    p {
+        font-size: 15px;
+    }
+    .hero-img {
+        transform: translateX(0px) !important;
+    }
+    .counter-box.counter-box-1 {
+        transform: translate(69px , -21px);
+    }
+    .counter-box.counter-box-2 {
+        transform: translate(-101px , 171px);
+    }
+}
+@media screen and (max-width : 850px){
+    .container{
+        flex-direction: column;
+        gap: 40px;
+        padding:  30px;
+    }
+    .row{
+        width: 100%;
+    }
+}
+@media screen and (max-width : 450px){
+    .btn-box {
+        flex-direction: column;
+        a{
+            text-align: center;
+        }
+    }
+    .counter-box.counter-box-1 {
+        transform: translate(-10px , 56px);
+    }
+    .counter-box.counter-box-2 {
+        transform: translate(-11px , 171px);
+    }
+    h1 {
+        font-size: 38px;
+        line-height: 50px;
+    }
+    .itlaic-style {
+        font-size: 79px;
+    }
+}
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 678px) {
     .hamburger{
         display: flex;
