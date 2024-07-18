@@ -233,7 +233,6 @@ p{
 }
 h2{
     font-size: 48px;
-    text-align: center;
 }
 .grid-box-habit{
     grid-template-columns: auto auto auto auto;
@@ -265,7 +264,24 @@ h2{
         }
     }
 }
-
+.card-run {
+	display: flex;
+	gap: 50px;
+	align-items: center;
+	background: rgba(34, 34, 34, 1);
+	padding: 50px;
+	border-radius: 18px;
+    h2{
+        font-weight: 800;
+    }
+    a{
+        padding: 15px 83px;
+    }
+    p{
+        width: 85%;
+        font-weight: 300;
+    }
+}
 
 
 
@@ -323,6 +339,14 @@ h2{
     .py {
         padding: 120px 20px;
     }
+    .card-run{
+        p{
+            font-size: 15px;
+        }
+    }
+    section{
+        padding-top: 100px;
+    }
 }
 @media screen and (max-width: 900px){
     .container {
@@ -347,6 +371,15 @@ h2{
     .counter-box.counter-box-2 {
         transform: translate(-101px , 171px);
     }
+    .card-run{
+        h2{
+            font-size: 34px;
+        }
+    }
+    img {
+        width: 290px;
+        height: auto;
+    }
 }
 @media screen and (max-width : 850px){
     .container{
@@ -370,6 +403,21 @@ h2{
             height: auto;
             align-self: center;
         }
+    }
+}
+@media screen and (max-width : 750px){
+    .card-run {
+        flex-direction: column;
+        img{
+            width: 100%;
+        }
+        a{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    br{
+        display: none;
     }
 }
 @media screen and (max-width : 450px){
