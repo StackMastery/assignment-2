@@ -20,6 +20,21 @@
     }
     transition: all 0.5s ease;
 }
+.text-center{
+    text-align: center;
+}
+.py{
+    padding: 50px 20px;
+}
+.gap-20{
+    gap: 20px;
+}
+.flex{
+    display: flex;
+}
+.grid{
+    display: grid;
+}
 /*Var */
 h1,h2,h3,h4,h5,h6,a{
     color: var(--text-color) ;
@@ -211,8 +226,54 @@ p{
 }
 .hero {
 	background: linear-gradient(0deg , #000 , #2c2c2ca6);
-    padding-top: 100px;
+    padding: 100px 20px;
 }
+.flex-cloumn{
+    flex-direction: column;
+}
+h2{
+    font-size: 48px;
+    text-align: center;
+}
+.grid-box-habit{
+    grid-template-columns: auto auto auto auto;
+    padding-top: 40px;
+    gap: 80px;
+}
+.box-habits {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+    gap: 50px;
+    transition: all 0.5s ease;
+    div{
+        flex-direction: column;
+        gap: 10px;
+    }
+    h3{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    img{
+        border-radius: 50%;
+        transition: all 0.5s ease;
+    }
+    &:hover{
+        cursor: pointer;
+        img{
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
 
 
 
@@ -249,6 +310,19 @@ p{
     .container {
         margin-bottom: -146px !important;
     }
+    .box-habits{
+        img {
+            width: 130px;
+            height: auto;
+            align-self: center;
+        }
+    }
+    .grid-box-habit {
+        gap: 48px;
+    }
+    .py {
+        padding: 120px 20px;
+    }
 }
 @media screen and (max-width: 900px){
     .container {
@@ -283,6 +357,20 @@ p{
     .row{
         width: 100%;
     }
+    .grid-box-habit {
+        gap: 48px;
+        grid-template-columns: auto auto;
+    }
+    .content-box h2 {
+        font-size: 40px;
+    }
+    .box-habits{
+        img {
+            width: auto;
+            height: auto;
+            align-self: center;
+        }
+    }
 }
 @media screen and (max-width : 450px){
     .btn-box {
@@ -304,16 +392,13 @@ p{
     .itlaic-style {
         font-size: 79px;
     }
+    .grid-box-habit.grid {
+        grid-template-columns: auto;
+    }
+    .content-box h2 {
+        font-size: 30px;
+    }
 }
-
-
-
-
-
-
-
-
-
 @media screen and (max-width: 678px) {
     .hamburger{
         display: flex;
