@@ -406,6 +406,7 @@ h2{
 	justify-content: space-around;
 	gap: 20px;
 	padding-top: 50px;
+    width: 100%;
 }
 .members {
 	width: 30%;
@@ -418,9 +419,56 @@ h2{
 	justify-content: end;
 	padding: 20px;
 }
-
-
-
+footer{
+    h2{
+        font-size: 50px !important;
+    }
+    p{
+        font-size: 14px;
+        padding-top: 20px;
+    }
+    h3 {
+        font-size: 27px;
+        font-weight: 700;
+        padding-bottom: 20px;
+    }
+    .c2 li {
+        font-size: 16px;
+        font-weight: 300;
+        padding-bottom: 11px;
+        color: rgba(255, 255, 255, 0.5);
+        list-style: none;
+        a{
+            color: rgba(255, 255, 255, 0.5);
+            &:hover{
+                color: var(--primary-color);
+            }
+        }
+    }
+}
+.footer-content {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+    justify-content: space-between;
+}
+.c1 {
+	width: 35%;
+}
+.footer-copy {
+	padding: 30px 0px;
+    width: 100%;
+}
+.footer-copy h6 {
+	font-size: 14px;
+	font-weight: 400;
+	color: rgb(90, 90, 90);
+	padding-top: 20px;
+	border-top: 1px solid rgb(58, 58, 58);
+	width: 100% !important;
+	text-align: center;
+}
 
 
 
@@ -435,6 +483,12 @@ h2{
 @media screen and (max-width:1080px){
     .traning-grid {
         padding: 200px 20px 50px 20px;
+    }
+    footer {
+        padding: 100px 20px 170px;
+        br{
+            display: none !important;
+        }
     }
     h1 {
         font-size: 58px;
@@ -527,6 +581,17 @@ h2{
         gap: 40px;
         padding:  30px;
     }
+    footer{
+        h3{
+            font-size: 18px;
+        }
+        li{
+            font-size: 12px;
+        }
+        h2{
+            font-size: 40px !important;
+        }
+    }
     table {
         width: 100% !important;
     }
@@ -569,6 +634,12 @@ h2{
     }
     br{
         display: none;
+    }
+    .c1,.c2 {
+        width: 100%;
+    }
+    .footer-copy h6 {
+        text-align: start;
     }
 }
 @media screen and (max-width : 450px){
