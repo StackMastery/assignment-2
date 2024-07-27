@@ -400,11 +400,24 @@ h2{
         }
     }
 }
-
-
-
-
-
+.grid-team {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	gap: 20px;
+	padding-top: 50px;
+}
+.members {
+	width: 30%;
+	height: 240px;
+	background-size: cover !important;
+	background-position: center !important;
+	border-radius: 18px;
+	display: flex;
+	flex-direction: column;
+	justify-content: end;
+	padding: 20px;
+}
 
 
 
@@ -514,6 +527,9 @@ h2{
         gap: 40px;
         padding:  30px;
     }
+    table {
+        width: 100% !important;
+    }
     .row{
         width: 100%;
     }
@@ -605,5 +621,10 @@ h2{
         width: 91%;
         border-radius: 15px;
         padding: 40px 20px;
+    }
+}
+@media screen and (max-width: 550px){
+    .members{
+        width: 100%;
     }
 }
